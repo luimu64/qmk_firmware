@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [_DVPFI] = { {   KC_GESC,        S(KC_6),     RALT(KC_8),  RALT(KC_7),  RALT(KC_0),  S(KC_8),  S(KC_0),  S(KC_NUHS),   S(KC_9), KC_MINS,   RALT(KC_9),     S(KC_1),   S(KC_3),       KC_BSPC,        KC_NO,     DF(_QWERTY) },
                 {   KC_TAB,         S(KC_COMMA), KC_COMMA,    KC_DOT,      KC_P,        KC_Y,     KC_F,     KC_G,         KC_C,    KC_R,      KC_L,           S(KC_7),   RALT(KC_2),    KC_NO,          KC_NO,     KC_HOME    },
                 {   KC_LSFT,        KC_A,        KC_O,        KC_E,        KC_U,        KC_I,     KC_D,     KC_H,         KC_T,    KC_N,      KC_S,           KC_SLSH,   RALT(KC_MINS), KC_ENT,         KC_NO,     KC_PGUP    },
-                {   MO(_DVRAISE),   KC_SCLN,     KC_BSLS,     KC_Q,        KC_J,        KC_K,     KC_X,     KC_B,         KC_M,    KC_W,      KC_V,           KC_Z,      KC_NO,         MO(_DVRAISE),   KC_UP,     KC_PGDN    },
+                {   MO(_DVRAISE),   KC_QUOT,     KC_BSLS,     KC_Q,        KC_J,        KC_K,     KC_X,     KC_B,         KC_M,    KC_W,      KC_V,           KC_Z,      KC_NO,         MO(_DVRAISE),   KC_UP,     KC_PGDN    },
                 {   KC_LCTL,        KC_LGUI,     KC_LALT,     KC_NO,       KC_NO,       KC_NO,    KC_SPC,   KC_NO,        KC_NO,   KC_NO,     KC_RALT,        MO(_FN1),  MO(_FN2),      KC_LEFT,        KC_DOWN,   KC_RGHT    }
                 },
               
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  [_DVRAISE] = { {   RALT(KC_RBRC),  S(KC_5),     KC_7,      KC_5,        KC_3,    KC_1,    KC_9,     KC_0,    KC_2,    KC_4,      KC_6,      KC_8,           S(KC_EQL),      KC_TRNS,   KC_NO,     KC_NO    },
                 {   KC_CAPS,        S(KC_DOT),   KC_NUBS,   S(KC_NUBS),  S(KC_P), S(KC_Y), S(KC_F),  S(KC_G), S(KC_C), S(KC_R),   S(KC_L),   S(KC_MINS),     S(KC_RBRC),     KC_NO,     KC_NO,     KC_NO    },
                 {   KC_TRNS,        S(KC_A),     S(KC_O),   S(KC_E),     S(KC_U), S(KC_I), S(KC_D),  S(KC_H), S(KC_T), S(KC_N),   S(KC_S),   S(KC_SLASH),    RALT(KC_NUBS),  KC_TRNS,   KC_NO,     KC_NO    },
-                {   KC_TRNS,        KC_QUOT,     S(KC_2),   S(KC_Q),     S(KC_J), S(KC_K), S(KC_X),  S(KC_B), S(KC_M), S(KC_W),   S(KC_V),   S(KC_Z),        KC_NO,          KC_TRNS,   RGB_VAI,   KC_NO    },
+                {   KC_TRNS,        KC_SCLN,     S(KC_2),   S(KC_Q),     S(KC_J), S(KC_K), S(KC_X),  S(KC_B), S(KC_M), S(KC_W),   S(KC_V),   S(KC_Z),        KC_NO,          KC_TRNS,   RGB_VAI,   KC_NO    },
                 {   KC_TRNS,        KC_TRNS,     KC_TRNS,   KC_NO,       KC_NO,   KC_NO,   KC_TRNS,  KC_NO,   KC_NO,   KC_NO,     KC_TRNS,   KC_TRNS,        KC_TRNS,        RGB_HUD,   RGB_VAD,   RGB_HUI  }
               },
                
