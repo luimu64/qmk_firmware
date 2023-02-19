@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┬───┐
  * │ ~ │ % │ 9 │ 7 │ 5 │ 3 │ 1 │ 0 │ 2 │ 4 │ 6 │ 8 │ ` │       │TOG│
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┼───┤
- * │CAPS │ : │ < │ > │ P │ Y │ F │ G │ C │ R │ L │ ? │ ^ │     │   │
+ * │     │ : │ < │ > │ P │ Y │ F │ G │ C │ R │ L │ ? │ ^ │     │   │
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    ├───┤
  * │      │ A │ O │ E │ U │ I │ D │ H │ T │ N │ S │ _ │ \ │    │   │
  * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴┬───┼───┤
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * └────┴────┴────┴────────────────────────┴───┴───┴───┴───┴───┴───┘
  *      Row:        0               1            2          3            4        5        6         7        8        9          10         11              12              13         14         15       */
  [_DVRAISE] = { {   RALT(KC_RBRC),  S(KC_5),     KC_9,      KC_7,        KC_5,    KC_3,    KC_1,     KC_0,    KC_2,    KC_4,      KC_6,      KC_8,           S(KC_EQL),      KC_TRNS,   KC_NO,     KC_NO    },
-                {   KC_CAPS,        S(KC_DOT),   KC_NUBS,   S(KC_NUBS),  S(KC_P), S(KC_Y), S(KC_F),  S(KC_G), S(KC_C), S(KC_R),   S(KC_L),   S(KC_MINS),     S(KC_RBRC),     KC_NO,     KC_NO,     KC_NO    },
+                {   S(KC_TAB),      S(KC_DOT),   KC_NUBS,   S(KC_NUBS),  S(KC_P), S(KC_Y), S(KC_F),  S(KC_G), S(KC_C), S(KC_R),   S(KC_L),   S(KC_MINS),     S(KC_RBRC),     KC_NO,     KC_NO,     KC_NO    },
                 {   KC_TRNS,        S(KC_A),     S(KC_O),   S(KC_E),     S(KC_U), S(KC_I), S(KC_D),  S(KC_H), S(KC_T), S(KC_N),   S(KC_S),   S(KC_SLASH),    RALT(KC_NUBS),  KC_TRNS,   KC_NO,     KC_NO    },
                 {   KC_TRNS,        KC_SCLN,     S(KC_2),   S(KC_Q),     S(KC_J), S(KC_K), S(KC_X),  S(KC_B), S(KC_M), S(KC_W),   S(KC_V),   S(KC_Z),        KC_NO,          KC_TRNS,   RGB_VAI,   KC_NO    },
                 {   KC_TRNS,        KC_TRNS,     KC_TRNS,   KC_NO,       KC_NO,   KC_NO,   KC_TRNS,  KC_NO,   KC_NO,   KC_NO,     KC_TRNS,   KC_TRNS,        KC_TRNS,        RGB_HUD,   RGB_VAD,   RGB_HUI  }
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 {   KC_CAPS,   KC_A,      KC_S,      KC_D,    KC_F,    KC_G,    KC_H,     KC_J,    KC_K,    KC_L,      KC_SCLN,   KC_QUOT,   KC_NUHS,   KC_ENT,    KC_NO,     KC_PGUP    },
                 {   KC_LSFT,   KC_NUBS,   KC_Z,      KC_X,    KC_C,    KC_V,    KC_B,     KC_N,    KC_M,    KC_COMM,   KC_DOT,    KC_SLSH,   KC_NO,     KC_RSFT,   KC_UP,     KC_PGDN    },
                 {   KC_LCTL,   KC_LGUI,   KC_LALT,   KC_NO,   KC_NO,   KC_NO,   KC_SPC,   KC_NO,   KC_NO,   KC_NO,     KC_RALT,   MO(_FN1),  MO(_FN2),  KC_LEFT,   KC_DOWN,   KC_RGHT    }
-              },
+                },
                
  /* _FN1 Settings
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┬───┐
@@ -97,19 +97,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┼───┤
  * │     │   │   │   │   │   │   │   │   │   │INS│DEL│END│     │   │
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    ├───┤
- * │      │   │   │   │   │   │   │   │   │   │   │   │   │    │   │
+ * │ CAPS │   │   │   │   │   │   │   │   │   │   │   │   │    │   │
  * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴┬───┼───┤
  * │    │   │   │   │   │   │   │   │   │   │   │   │      │SPI│   │
  * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴──┬┴──┬┴──┬───┼───┼───┤
  * │    │    │    │                        │   │FN1│FN2│VAD│SPD│VAI│
  * └────┴────┴────┴────────────────────────┴───┴───┴───┴───┴───┴───┘
  *      Row:        0               1          2          3        4        5        6         7        8        9          10         11         12         13         14         15        */
-     [_FN1] = { {   RALT(KC_4),     KC_BRIU,   KC_BRID,   KC_NO,   KC_NO,   RGB_VAD, RGB_VAI,  KC_MPRV, KC_MPLY, KC_MNXT,   KC_MUTE,   KC_VOLD,   KC_VOLU,   KC_NO,     KC_NO,     RGB_TOG    },
-                {   KC_NO,          KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_INS,    KC_DEL,    KC_END,    KC_NO,     KC_NO,     KC_NO      },
-                {   KC_NO,          KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO      },
-                {   KC_TRNS,        KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    NK_ON,   KC_NO,   KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     RGB_SPI,   KC_NO      },
-                {   KC_TRNS,        KC_TRNS,   KC_TRNS,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_RGUI,   KC_NO,     KC_NO,     RGB_VAD,   RGB_SPD,   RGB_VAI    }
-              },             
+ [_FN1] = { {   RALT(KC_4),     KC_BRIU,   KC_BRID,   KC_NO,   KC_NO,   RGB_VAD, RGB_VAI,  KC_MPRV, KC_MPLY, KC_MNXT,   KC_MUTE,   KC_VOLD,   KC_VOLU,   KC_NO,     KC_NO,     RGB_TOG    },
+            {   KC_NO,          KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_INS,    KC_DEL,    KC_END,    KC_NO,     KC_NO,     KC_NO      },
+            {   KC_CAPS,        KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO      },
+            {   KC_TRNS,        KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    NK_ON,   KC_NO,   KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     RGB_SPI,   KC_NO      },
+            {   KC_TRNS,        KC_TRNS,   KC_TRNS,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_RGUI,   KC_NO,     KC_NO,     RGB_VAD,   RGB_SPD,   RGB_VAI    }
+            },             
               
 /* _FN2 MOD Keys (common to qwerty/dvorak)
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┬───┐
@@ -124,12 +124,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * │    │    │    │                        │   │   │FN2│SAD│SPD│SAI│
  * └────┴────┴────┴────────────────────────┴───┴───┴───┴───┴───┴───┘
  *      Row:        0           1          2          3        4        5        6         7        8        9          10         11         12         13         14         15        */
-     [_FN2] = { {   RCTL(KC_E), KC_F1,     KC_F2,     KC_F3,   KC_F4,   KC_F5,   KC_F6,    KC_F7,   KC_F8,   KC_F9,     KC_F10,    KC_F11,    KC_F12,    RESET,     KC_NO,     RGB_MOD   },
-                {   KC_NO,      KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO      },
-                {   KC_NO,      KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO      },
-                {   KC_TRNS,    KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     RGB_SPI,   KC_NO      },
-                {   KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_RALT,   KC_NO,     KC_NO,     RGB_SAD,   RGB_SPD,   RGB_SAI    }
-              }
+ [_FN2] = { {   RCTL(KC_E), KC_F1,     KC_F2,     KC_F3,   KC_F4,   KC_F5,   KC_F6,    KC_F7,   KC_F8,   KC_F9,     KC_F10,    KC_F11,    KC_F12,    RESET,     KC_NO,     RGB_MOD   },
+            {   KC_NO,      KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO      },
+            {   KC_NO,      KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO      },
+            {   KC_TRNS,    KC_NO,     KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     RGB_SPI,   KC_NO      },
+            {   KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,     KC_RALT,   KC_NO,     KC_NO,     RGB_SAD,   RGB_SPD,   RGB_SAI    }
+            }
 };
 
 
